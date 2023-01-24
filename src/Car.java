@@ -1,10 +1,11 @@
 public class Car implements Vehicle {
-    int num_wheels, max_speed, max_passengers;
+    private final int num_wheels = 4;
+    private final int max_speed = 100;
+    private final int max_passengers = 4;
+    private String driver_name;
 
-    public Car() {
-        this.num_wheels = 4;
-        this.max_speed = 100;
-        this.max_passengers = 4;
+    public Car(String driver_name) {
+        this.driver_name = driver_name;
     }
 
     @Override
@@ -20,5 +21,10 @@ public class Car implements Vehicle {
     @Override
     public int getMaxPassengers() {
         return max_passengers;
+    }
+
+    @Override
+    public String getDriverName() {
+        return driver_name;
     }
 }
