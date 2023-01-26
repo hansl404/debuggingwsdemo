@@ -6,6 +6,4 @@ public interface Vehicle {
 
   public int getMaxPassengers();
 
-  public String getDriverName();
-
 }
