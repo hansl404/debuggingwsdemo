@@ -10,34 +10,21 @@ public class Bike implements Vehicle {
     this.biker = biker;
   }
 
-  @Override
-  public int getWheels() {
-    return num_wheels;
-  }
-
-  @Override
-  public int getMaxSpeed() {
-    return max_speed;
-  }
-
-  @Override
-  public int getMaxPassengers() {
-    return max_passengers;
-  }
-
   public int getMilesPerEnergy() {
     return milesPerEnergy;
   }
 
-  public String getBikerName() {
+  public String getUserName() {
     return biker.getName();
   }
 
-  // BUG: Can get biker's money instead of energy
+  // BUG: Can try to get biker's money instead of energy
+  @Override
   public int getBikerEnergy() {
     return biker.getEnergy();
   }
 
+  @Override
   public double getMaxPossibleDistance() {
     return biker.getEnergy() / milesPerEnergy;
   }

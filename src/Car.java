@@ -11,21 +11,6 @@ public class Car implements Vehicle {
         this.driver = driver;
     }
 
-    @Override
-    public int getWheels() {
-        return num_wheels;
-    }
-
-    @Override
-    public int getMaxSpeed() {
-        return max_speed;
-    }
-
-    @Override
-    public int getMaxPassengers() {
-        return max_passengers;
-    }
-
     public int getMPG() {
         return mpg;
     }
@@ -34,7 +19,8 @@ public class Car implements Vehicle {
         return gasPricePerGallon;
     }
 
-    public String getDriverName() {
+    @Override
+    public String getUserName() {
         return driver.getName();
     }
 
@@ -43,6 +29,7 @@ public class Car implements Vehicle {
     }
 
     // BUG: Can change return type of one of the steps to a int instead of a double
+    @Override
     public double getMaxPossibleDistance() {
         double totalGas = getDriverMoney() / getGasPricePerGallon();
         double maxMiles = totalGas * getMPG();
