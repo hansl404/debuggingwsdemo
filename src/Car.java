@@ -28,7 +28,7 @@ public class Car implements Vehicle {
         return driver.getMoney();
     }
 
-    // BUG: Can change return type of one of the steps to a int instead of a double
+    // BUG: Can change return type of one of the steps to an int instead of a double
     @Override
     public double getMaxPossibleDistance() {
         double totalGas = getDriverMoney() / getGasPricePerGallon();
