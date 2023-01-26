@@ -1,7 +1,5 @@
 public class Bike implements Vehicle {
-  private final int num_wheels = 2;
-  private final int max_speed = 20;
-  private final int max_passengers = 2;
+
   private final int milesPerEnergy = 10;
 
   private User biker;
@@ -14,19 +12,28 @@ public class Bike implements Vehicle {
     return milesPerEnergy;
   }
 
+  @Override
   public String getUserName() {
     return biker.getName();
   }
 
   // BUG: Can try to get biker's money instead of energy
-  @Override
   public int getBikerEnergy() {
     return biker.getEnergy();
   }
 
   @Override
   public double getMaxPossibleDistance() {
-    return biker.getEnergy() / milesPerEnergy;
+    return getBikerEnergy() / getMilesPerEnergy();
+  }
+
+  public double moneySaved(double distance) {
+    Car imaginaryCar = new Car(biker);
+    double pricePerGallon = imaginaryCar.getGasPricePerGallon();
+    double milesPerGallon = imaginaryCar.getMPG();
+    double gallonsGasNeeded = distance / milesPerGallon;
+    double priceToTravelByCar = gallonsGasNeeded * pricePerGallon;
+    return priceToTravelByCar;
   }
 
 }

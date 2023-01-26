@@ -1,7 +1,7 @@
+import java.util.*;
+
 public class Car implements Vehicle {
-    private final int num_wheels = 4;
-    private final int max_speed = 100;
-    private final int max_passengers = 4;
+
     private final int mpg = 30;
     private final double gasPricePerGallon = 2.5;
 
@@ -35,4 +35,27 @@ public class Car implements Vehicle {
         double maxMiles = totalGas * getMPG();
         return maxMiles;
     }
+
+    public List<String> possibleCities() {
+        List<String> answer = new ArrayList<>();
+        HashMap<String, Double> cityDistances = new HashMap<>();
+        cityDistances.put("Durham", 14.3);
+        cityDistances.put("Cary", 22.3);
+        cityDistances.put("Raleigh", 28.3);
+        cityDistances.put("Greensboro", 50.5);
+        cityDistances.put("Charlotte", 141.2);
+        cityDistances.put("Asheville", 221.1);
+        cityDistances.put("Where han wants to live", 11533.2);
+
+        for (Map.Entry<String, Double> element: cityDistances.entrySet()) {
+            String city = element.getKey();
+            double miles = element.getValue();
+            if (miles <= getMaxPossibleDistance()) {   // BUG: Can change <= to >
+                answer.add(city);
+            }
+        }
+
+        return answer;
+    }
+
 }
