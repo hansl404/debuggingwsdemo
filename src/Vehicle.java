@@ -1,9 +1,7 @@
 public interface Vehicle {
 
-  public int getWheels();
+  public String getUserName();
 
-  public int getMaxSpeed();
-
-  public int getMaxPassengers();
+  public double getMaxPossibleDistance();
 
 }
