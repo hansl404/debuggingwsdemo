@@ -14,12 +14,12 @@ public class Bike implements Vehicle {
     return milesPerEnergy;
   }
 
+  @Override
   public String getUserName() {
     return biker.getName();
   }
 
   // BUG: Can try to get biker's money instead of energy
-  @Override
   public int getBikerEnergy() {
     return biker.getEnergy();
   }
