@@ -3,7 +3,7 @@ import java.util.*;
 public class Car implements Vehicle {
 
     private final int mpg = 30;
-    private final double gasPricePerGallon = 2.5;
+    private final double gasPricePerGallon = 3.33;
 
     private User driver;
 
@@ -28,10 +28,9 @@ public class Car implements Vehicle {
         return driver.getMoney();
     }
 
-    // BUG: Can change return type of one of the steps to an int instead of a double
     @Override
     public double getMaxPossibleDistance() {
-        double totalGas = getDriverMoney() / getGasPricePerGallon();
+        int totalGas = (int)(getDriverMoney() / getGasPricePerGallon());
         double maxMiles = totalGas * getMPG();
         return maxMiles;
     }
@@ -45,12 +44,13 @@ public class Car implements Vehicle {
         cityDistances.put("Greensboro", 50.5);
         cityDistances.put("Charlotte", 141.2);
         cityDistances.put("Asheville", 221.1);
-        cityDistances.put("Where han wants to live", 11533.2);
+        cityDistances.put("The Moon", 238900.0);
 
         for (Map.Entry<String, Double> element: cityDistances.entrySet()) {
             String city = element.getKey();
             double miles = element.getValue();
-            if (miles <= getMaxPossibleDistance()) {   // BUG: Can change <= to >
+            System.out.println(city + " is " + miles + " miles away");
+            if (miles > getMaxPossibleDistance()) {
                 answer.add(city);
             }
         }

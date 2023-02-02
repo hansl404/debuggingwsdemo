@@ -2,7 +2,7 @@ public class User {
 
   private String name;
   private double money;
-  private int energy;
+  private double energy;
 
   public User (String name, double money, int energy) {
     this.name = name;
@@ -18,7 +18,7 @@ public class User {
     return this.money;
   }
 
-  public int getEnergy() {
+  public double getEnergy() {
     return this.energy;
   }
 
