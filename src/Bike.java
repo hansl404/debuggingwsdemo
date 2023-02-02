@@ -27,7 +27,6 @@ public class Bike implements Vehicle {
   }
 
   public double moneySaved(double distance) {
-    // make one of these a bug
     Car imaginaryCar = new Car(biker);
     double pricePerGallon = imaginaryCar.getGasPricePerGallon();
     double milesPerGallon = imaginaryCar.getDriverMoney();
