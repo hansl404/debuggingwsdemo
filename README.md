@@ -1,4 +1,4 @@
-# debuggingwsdemo
+# Debugging Workshop!
 
 This is the demo repo for the COMP 301 Debugging Workshop.
 
@@ -12,4 +12,4 @@ This workshop will go over different ways to debug...
 1) Create a Main class, instantiate objects, and do a bunch of print statements.
 2) Use the IntelliJ debugger
 
-
+Slides: https://docs.google.com/presentation/d/18eTDGr6FtyiKhMI4Dc99LSU2bQAHwLIgf0ykAgFGkzI/edit?usp=sharing
