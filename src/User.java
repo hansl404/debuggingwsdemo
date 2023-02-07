@@ -19,7 +19,7 @@ public class User {
   }
 
   public double getEnergy() {
-    return this.energy;
+    return this.money;
   }
 
 }

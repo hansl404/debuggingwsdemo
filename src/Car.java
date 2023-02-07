@@ -3,7 +3,7 @@ import java.util.*;
 public class Car implements Vehicle {
 
     private final int mpg = 30;
-    private final double gasPricePerGallon = 3.33;
+    private final double gasPricePerGallon = 3.14;
 
     private User driver;
 

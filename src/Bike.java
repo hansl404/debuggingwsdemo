@@ -18,7 +18,7 @@ public class Bike implements Vehicle {
   }
 
   public double getBikerEnergy() {
-    return biker.getMoney();
+    return biker.getEnergy();
   }
 
   @Override
