@@ -22,7 +22,7 @@ public class Bike implements Vehicle {
   }
 
   @Override
-  public double getMaxPossibleDistance() {
+  public double maxPossibleDistance() {
     return getBikerEnergy() / getMilesPerEnergy();
   }
 

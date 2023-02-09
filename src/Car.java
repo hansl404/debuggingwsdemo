@@ -29,7 +29,7 @@ public class Car implements Vehicle {
     }
 
     @Override
-    public double getMaxPossibleDistance() {
+    public double maxPossibleDistance() {
         int totalGas = (int)(getDriverMoney() / getGasPricePerGallon());
         double maxMiles = totalGas * getMPG();
         return maxMiles;
@@ -50,7 +50,7 @@ public class Car implements Vehicle {
             String city = element.getKey();
             double miles = element.getValue();
             System.out.println(city + " is " + miles + " miles away");
-            if (miles > getMaxPossibleDistance()) {
+            if (miles > maxPossibleDistance()) {
                 answer.add(city);
             }
         }
