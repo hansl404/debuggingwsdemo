@@ -49,8 +49,8 @@ public class Car implements Vehicle {
         for (Map.Entry<String, Double> element: cityDistances.entrySet()) {
             String city = element.getKey();
             double miles = element.getValue();
-            System.out.println(city + " is " + miles + " miles away");
-            if (miles > maxPossibleDistance()) {
+            double maxDist = maxPossibleDistance();
+            if (miles > maxDist) {
                 answer.add(city);
             }
         }
